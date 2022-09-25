@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package edu.ics499.fume.entities;
+
+/**
+ * @author marselos a. reed
+ * 
+ * USER- Represents a user profile
+ */
+public class User extends Node {
+	private String userName = "";
+	private String networkID = "";
+	
+
+	public User(long userID, String persona, String userName, String networkID) {
+		super(userID, persona, networkID);
+		this.userName = userName;
+	}
+
+
+	/**
+	 * @return the userName
+	 */
+	public String getUserName() {return userName;}
+
+
+	/**
+	 * @param userName the userName to set
+	 */
+	public void setUserName(String userName) {this.userName = userName;}
+
+
+	/**
+	 * @return the networkID
+	 */
+	public String getNetworkID() {return networkID;}
+	
+	
+	
+
+}
