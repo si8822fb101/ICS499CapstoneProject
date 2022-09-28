@@ -3,49 +3,54 @@
  */
 package edu.ics499.fume.entities;
 
-import java.util.Random;
 
 /**
- * @author marselos a. reed
+ * @author marselos a. reed, qaalib farah, john quinlan, ayden sinn, mohamed mahmoud
  *
- * NODE - Represents a persona
+ * NODE - Represents a user/device on the network
+ * 
  */
-public class Node {
-	private int identifier; 
-	private String persona = "";
-	private String netID="";
-
+public class Node extends User{
+	private Node left, right;
+	private String hash;
 	/**
-	 * @param userID
-	 * @param persona
+	 * @param left
+	 * @param right
+	 * @param hash
 	 */
-	public Node(long userID, String persona, String netID) {
-		Random random = new Random();
-		
-		this.identifier = random.nextInt(1000000);
-		this.setPersona(persona);
-		this.setNetID(netID);
+	public Node(Node left, Node right, String hash) {
+		super("","");
+		this.left = left;
+		this.right = right;
+		this.hash = hash;
 	}
 	/**
-	 * @return the identifier
+	 * @return the left
 	 */
-	public int getIdentifier() {return identifier;}
+	public Node getLeft() {return left;}
 	/**
-	 * @return the persona
+	 * @param left the left to set
 	 */
-	public String getPersona() {return persona;}
+	public void setLeft(Node left) {this.left = left;}
 	/**
-	 * @param persona the persona to set
+	 * @return the right
 	 */
-	public void setPersona(String persona) {this.persona = persona;}
+	public Node getRight() {return right;}
 	/**
-	 * @return the netID
+	 * @param right the right to set
 	 */
-	public String getNetID() {return netID;}
+	public void setRight(Node right) {this.right = right;}
 	/**
-	 * @param netID the netID to set
+	 * @return the hash
 	 */
-	public void setNetID(String netID) {this.netID = netID;} 
+	public String getHash() {return hash;}
+	/**
+	 * @param hash the hash to set
+	 */
+	public void setHash(String hash) {this.hash = hash;}
+	
+	
+ 
 	
 	
 	
