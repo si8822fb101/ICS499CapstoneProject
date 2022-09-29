@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>490</y>
+      <w>370</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.collections::NodeList
+--
+-nodeList: LinkedList&lt;Block&gt;
+-top, tip: Block
+-capacity: int
+--
++NodeList(LinkedList&lt;Block&gt; nodeList, int capacity): ctor
++getTop(): Block
++setTop(Block top): void
++getTip(): Block
++setTip(Block tip): void
++getCapacity(): int
++setCapacity(int capacity): void
++insert(Block node): boolean
++remove(Block node): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>430</y>
+      <w>320</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.collections::BlockChain
+--
+--
++treeGenerator(ArrayList&lt;String&gt; blocks): Node
+-treeBuilder(ArrayList&lt;Node&gt; chain): Node
++showBlockchain(Node genesis): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>0</y>
+      <w>370</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>/edu.ics499.fume.facade::Block/
+--
+-hash: Integer
+-top, left, right: Block
+-temporal: Calendar
+--
++Block(Block top, Integer hash, Calendar temporal): ctor
++getHash(): Integer
++getTop(): Block
++setTop(Block top): void
++getLeft(): Block
++setLeft(Block left): void
++getRight(): Block
++setRight(Block right): void
++getTemporal(): Calendar
++setTemporal(Calendar temporal): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>0</y>
+      <w>310</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.entities::Node
+--
+-left, right: Node
+-hash: String
+--
++Node(Node left, Node right, String hash): ctor
++getLeft(): Node
++setLeft(Node left): void
++getRight(): Node
++setRight(Node right): void
++getHash(): String
++setHash(String hash): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>0</y>
+      <w>270</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.entities::User
+--
+-userName = "", pin: String
+--
++User(String userName, String pin): ctor
++getUserName(): String
++setUserName(String userName): void
++getPin(): String
++setPin(String pin): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>300</y>
+      <w>300</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.entities::Message
+--
+-digest = "": String
+-messageID: String
+-networkID = "": String
+--
++Message(String digest, int messageID): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>290</y>
+      <w>380</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>/edu.ics499.fume.facade::Validation/
+--
+--
++validationCheck(String name, String pinNumber): boolean
+-nameValidation(String object): boolean
+-pinValidation(String pinNumber): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>250</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.hash::Hashing
+--
+--
++hashCreation(String input): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>440</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.entities::File
+--
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>410</y>
+      <w>230</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>edu.ics499.fume.facade::Channel
+--
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
